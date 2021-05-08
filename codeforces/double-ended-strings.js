@@ -1,3 +1,9 @@
+/**
+ * @author PranjalAgni
+ * @createdAt 05/09/2021 12:09:15
+ */
+// https://codeforces.com/problemset/problem/1506/C
+
 'use strict';
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
