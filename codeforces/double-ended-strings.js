@@ -42,10 +42,17 @@ const main = () => {
 
     const [strA, strB] = getStringByLength(wordA, wordB);
     let startPos = 0;
+    let maxLength = 0;
     for (let jdx = 0; jdx < strA.length; jdx++) {
-      const wordSoFar = strA.substring(startPos, jdx);
-      if (!strB.includes(wordSoFar)) {
+      const wordSoFar = strA.substring(startPos, jdx + 1);
+      if (strB.includes(wordSoFar)) {
+        maxLength = Math.max(maxLength, jdx - startPos + 1);
+      } else {
+        startPos += 1;
       }
     }
+
+    const answer = strA.length - maxLength + strB.length - maxLength;
+    console.log(answer);
   }
 };
